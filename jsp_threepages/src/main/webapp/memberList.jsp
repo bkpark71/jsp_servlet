@@ -1,18 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
-import="java.util.ArrayList"
-import="java.util.List" %>
+import="java.util.HashMap"
+import="java.util.Map"
+import="data.Member" %>
 <html>
 <body>
 <%
-  List<String> aaa = new ArrayList<>();
-  aaa.add("A");
-  String[] members= {"A", "B", "C", "D", "E", "F", "G", "H"};
+  Map<String, Member> members = (HashMap)request.getAttribute("members");
 %>
 <h2>Hello World!</h2>
 <table>
-<tr><th>Name</th>
-<% for(String member : aaa) { %>
-    <tr><td><%= member %></td></tr>
+<tr><th>Id</th><th>Name</th></tr
+<% for(Member member : members.values()) { %>
+    <tr>
+        <td><%= member.getId() %></td>
+        <td><%= member.getName() %></td>
+    </tr>
 <% } %>
 <div>
 </div>
