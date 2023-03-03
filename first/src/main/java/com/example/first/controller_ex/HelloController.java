@@ -21,6 +21,6 @@ public class HelloController {
   @GetMapping("/hello2")   // localhost:8080/hello2?name=aaa 라고 get 요청이 들어오면
   public String hello2(@RequestParam("name") String name, Model model){
     model.addAttribute("name", name);
-    return "hello2"; // template folder 아래에 있는 hello2.html, hello2.jsp 찾아서 화면을 보여줘
+    return "/exercise/hello2"; // template folder 아래에 있는 hello2.html, hello2.jsp 찾아서 화면을 보여줘
   }
 }

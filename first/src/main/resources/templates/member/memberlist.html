@@ -1,0 +1,30 @@
+  <!DOCTYPE html>
+  <html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body>
+  <table>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>이름</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each=" member : ${members} ">
+        <td th:text="${member.id}">1</td> <!--member.getId() -->
+        <td th:text="${member.name}">홍길동</td> <!--member.getName() -->
+      </tr>
+<!--      <tr th:each=" member : ${members} ">-->
+<!--        <td th:text="${member.getId()}">1</td> &lt;!&ndash;member.getId() &ndash;&gt;-->
+<!--        <td th:text="${member.getName()}">홍길동</td> &lt;!&ndash;member.getName() &ndash;&gt;-->
+<!--      </tr>-->
+  </table>
+
+
+
+
+  </body>
+  </html>
